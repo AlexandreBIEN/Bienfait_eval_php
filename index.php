@@ -53,7 +53,7 @@ $links = get_all_link();
                     <!-- Lien d'édition -->
                     <a href="./edit-link.php?link_id=<?= $link['link_id']?>"><i class="fa-regular fa-pen-to-square me-1 text-warning"></i></a>
                     <!-- Lien de suppression -->
-                    <a href=""><i class="fa-solid fa-trash ms-1 text-danger"></i></a>
+                    <a href="./controllers/delete-controller.php?link_id=<?= $link['link_id']?>"><i class="fa-solid fa-trash ms-1 text-danger"></i></a>
                   </span>
                 </li>
               <?php endforeach;?>

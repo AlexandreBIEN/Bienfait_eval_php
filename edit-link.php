@@ -10,7 +10,7 @@ $link_info = get_link_by_id($_GET['link_id']);
       <div class="container h-100">
         <div class="row justify-content-center h-50">
           <div class="col-md-6 shadow p-3 pt-5">
-            <h2 class="mb-3">Éditer le lien <?= $link_info['title']?></h2>
+            <h2 class="mb-3">Éditer le lien : <?= $link_info['title']?></h2>
             <div class="mb-3">
               <form action="./controllers/edit-link-controller.php" method="post">
                 <div class="mb-3">

@@ -1,6 +1,7 @@
 <?php 
 require_once '../functions.php';
 
+// On créer un tableau $data avec les informations contenu dans le POST
 $data = ['link_id' => $_POST['link_id'], 'title' => $_POST['title'], 'url' => $_POST['url']];
 
 // On remplace les informations de la bdd avec celles du tableau $data

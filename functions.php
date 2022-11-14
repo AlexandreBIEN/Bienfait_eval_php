@@ -159,5 +159,22 @@ function create_link($data)
  */
 function delete_link($link_id)
 {
-    // TODO implement function
+    // Connexion à la base de donnée
+    $db = db_connect();
+
+    // Requête SQL
+    $sql = <<<EOD
+        DELETE FROM 
+            `links` 
+        WHERE 
+            `link_id` = :link_id;
+    EOD;
+
+    // On prépare la requête
+    $link = $db->prepare($sql);
+    $link -> bindvalue(':link_id', $link_id);
+
+    $link->execute();
+    // On retourne la réponse
+    return $link;
 }
