@@ -40,6 +40,7 @@ require_once __DIR__ . '/inc/header.php';
                 </div>
               </form>
             </div>
+            <!-- liste des liens -->
             <ul class="list-group">
               <li
                 class="list-group-item d-flex justify-content-between align-items-center"

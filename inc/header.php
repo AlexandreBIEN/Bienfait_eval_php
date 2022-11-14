@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Link manager</title>
+    <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,6 +12,7 @@
       crossorigin="anonymous"
     />
 
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +20,7 @@
       rel="stylesheet"
     />
 
+    <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -26,9 +29,11 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="py-5">
       <div class="container">
         <div class="row justify-content-center">
