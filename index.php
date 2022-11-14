@@ -10,7 +10,7 @@ $links = get_all_link();
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="mb-3">
-              <form action="" method="post">
+              <form action="./controllers/index-controller.php" method="post">
                 <div class="row g-2">
                   <div class="col-md">
                     <div class="form-floating">
@@ -37,7 +37,7 @@ $links = get_all_link();
                     </div>
                   </div>
                   <div class="col-md-auto d-flex">
-                    <button class="btn btn-primary btn-lg">Ajouter</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Ajouter</button>
                   </div>
                 </div>
               </form>
