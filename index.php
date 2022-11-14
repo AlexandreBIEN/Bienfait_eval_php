@@ -1,10 +1,12 @@
 <?php 
 // Ajout du header
 require_once __DIR__ . '/inc/header.php';
+require_once __DIR__ . '/functions.php';
 ?>
 
 <!-- Main content -->
       <div class="container">
+      <?php var_dump(get_link_by_id(2))?>
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="mb-3">

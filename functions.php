@@ -38,7 +38,21 @@ function db_connect(): PDO
  */
 function get_all_link()
 {
-    // TODO implement function
+    // Connexion à la base de donnée
+    $db = db_connect();
+
+    // Requête SQL
+    $sql = <<<EOD
+        SELECT 
+            `url` 
+        FROM 
+            `links`;
+    EOD;
+
+    $all_links = $db->query($sql);
+    $all_links_stmt = $all_links -> fetchall(PDO::FETCH_ASSOC);
+    // On retourne la réponse
+    return $all_links_stmt;
 }
 
 
@@ -49,7 +63,27 @@ function get_all_link()
  */
 function get_link_by_id($link_id)
 {
-    // TODO implement function
+    // Connexion à la base de donnée
+    $db = db_connect();
+
+    // Requête SQL
+    $sql = <<<EOD
+        SELECT 
+            `url` 
+        FROM 
+            `links` 
+        WHERE 
+            `link_id` = :link_id;
+    EOD;
+
+    // On prépare la requête
+    $link = $db->prepare($sql);
+    $link -> bindvalue(':link_id', $link_id);
+
+    $link->execute();
+    $link_stmt = $link -> fetch(PDO::FETCH_ASSOC);
+    // On retourne la réponse
+    return $link_stmt;
 }
 
 
