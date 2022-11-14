@@ -94,7 +94,29 @@ function get_link_by_id($link_id)
  */
 function update_link($data)
 {
-    // TODO implement function
+    // Connexion à la base de donnée
+    $db = db_connect();
+
+    // Requête SQL
+    $sql = <<<EOD
+        UPDATE 
+            `links` 
+        SET 
+            `title` = :title, 
+            `url` = :url
+        WHERE 
+            `link_id` = :link_id;
+    EOD;
+
+    // On prépare la requête
+    $link = $db->prepare($sql);
+    $link -> bindvalue(':link_id', $data['link_id']);
+    $link -> bindvalue(':title', $data['title']);
+    $link -> bindvalue(':url', $data['url']);
+
+    $link->execute();
+    // On retourne la réponse
+    return $link;
 }
 
 

@@ -6,7 +6,9 @@ require_once __DIR__ . '/functions.php';
 
 <!-- Main content -->
       <div class="container">
-      <?php var_dump(get_link_by_id(2))?>
+      <?php 
+        $data = ['link_id' => 2, 'title' => 'MDN 2', 'url' => 'https://developer.mozilla.org/fr/'];
+        var_dump(update_link($data))?>
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="mb-3">
