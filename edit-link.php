@@ -1,6 +1,8 @@
 <?php 
 // Ajout du header
 require_once __DIR__ . '/inc/header.php';
+require_once __DIR__ . '/functions.php';
+$link_info = get_link_by_id($_GET['link_id']);
 ?>
 
 <!-- Main content -->
@@ -8,9 +10,9 @@ require_once __DIR__ . '/inc/header.php';
       <div class="container h-100">
         <div class="row justify-content-center h-50">
           <div class="col-md-6 shadow p-3 pt-5">
-            <h2 class="mb-3">Éditer le lien # 1</h2>
+            <h2 class="mb-3">Éditer le lien <?= $link_info['title']?></h2>
             <div class="mb-3">
-              <form action="" method="post">
+              <form action="./controllers/edit-link-controller.php" method="post">
                 <div class="mb-3">
                   <div class="form-floating">
                     <input
@@ -36,7 +38,7 @@ require_once __DIR__ . '/inc/header.php';
                   </div>
                 </div>
                 <div class="col-md-auto d-flex">
-                  <button class="btn btn-primary btn-lg">Enregister</button>
+                  <button type="submit" class="btn btn-primary btn-lg">Enregister</button>
                 </div>
               </form>
             </div>

@@ -44,6 +44,7 @@ function get_all_link()
     // Requête SQL
     $sql = <<<EOD
         SELECT 
+            `link_id`,
             `title`,
             `url` 
         FROM 
@@ -70,7 +71,9 @@ function get_link_by_id($link_id)
     // Requête SQL
     $sql = <<<EOD
         SELECT 
-            `url` 
+            `link_id`,
+            `title`,
+            `url`  
         FROM 
             `links` 
         WHERE 

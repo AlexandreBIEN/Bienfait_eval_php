@@ -50,8 +50,10 @@ $links = get_all_link();
                 >
                   <a href="<?= $link['url']?>"> <?= $link['title']?></a>
                   <span>
-                    <i class="fa-regular fa-pen-to-square me-1 text-warning"></i>
-                    <i class="fa-solid fa-trash ms-1 text-danger"></i>
+                    <!-- Lien d'édition -->
+                    <a href="./edit-link.php?link_id=<?= $link['link_id']?>"><i class="fa-regular fa-pen-to-square me-1 text-warning"></i></a>
+                    <!-- Lien de suppression -->
+                    <a href=""><i class="fa-solid fa-trash ms-1 text-danger"></i></a>
                   </span>
                 </li>
               <?php endforeach;?>
