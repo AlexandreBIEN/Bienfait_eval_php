@@ -44,6 +44,7 @@ function get_all_link()
     // Requête SQL
     $sql = <<<EOD
         SELECT 
+            `title`,
             `url` 
         FROM 
             `links`;
@@ -127,7 +128,25 @@ function update_link($data)
  */
 function create_link($data)
 {
-    // TODO implement function
+    // Connexion à la base de donnée
+    $db = db_connect();
+
+    // Requête SQL
+    $sql = <<<EOD
+        INSERT INTO 
+            `links` (`title`, `url`) 
+        VALUES 
+            (:title, :url);
+    EOD;
+
+    // On prépare la requête
+    $link = $db->prepare($sql);
+    $link -> bindvalue(':title', $data['title']);
+    $link -> bindvalue(':url', $data['url']);
+
+    $link->execute();
+    // On retourne la réponse
+    return $link;
 }
 
 /**
